@@ -1,0 +1,215 @@
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto'
+  }
+  
+/* slap on this class if ncontent box is needed */
+.legacy {
+    box-sizing: content-box;
+  }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+/*
+  2. Remove default margin
+    Typographic tweaks!
+  3. Add accessible line-height
+*/
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+/*
+  4. Improve text rendering
+*/
+body {
+    -webkit-font-smoothing: antialiased;
+  }
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+  }
+
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+  }
+
+.header{
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 10px 10px;
+}
+
+/* Style the header links */
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  
+  }
+
+/* Change the background color on mouse-over */
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+/* Style the active/current link*/
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+    
+  }
+
+.logo > img{
+  padding-left: 10px;
+}
+
+.form-example{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.form-example > input {
+  margin: 30px 5px 100px;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  margin: 100px 5px 5px;
+}
+
+.title > h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 20em;
+  width: auto;
+  display: inline-block;
+  }
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Clear floats after image containers */
+.search-results::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.show-more{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+input#search-input {
+  border-radius: 13px;
+  border-width: 1.5px;
+  padding: 10px;
+}
+
+.submit-button{
+  display: block;
+}
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+    .title{
+      float: none;
+      display: block;
+    }
+    .column {
+      width: 100%;
+    }
+  }
