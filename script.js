@@ -30,23 +30,27 @@ const getImages = async () => {
         const imageWrapper = document.createElement('div');
         imageWrapper.setAttribute('id', 'image-wrapper');
         imageWrapper.setAttribute('class', 'column');
+        
         // create img element and set its src to photo address from results data
         const imageEl = document.createElement('img');
         imageEl.setAttribute('id', 'photo');
         imageEl.src = result.urls.full;
+       
         //create wrapper for text block div
         const textBlockWrapper = document.createElement('div');
         textBlockWrapper.setAttribute('class', 'text-block');
+        
         // create div for description text-block
         const textBlock = document.createElement('p');
         textBlock.innerHTML = result.alt_description;
+       
         // append image and text wrappers to resultsEl parent
         resultsEl.appendChild(imageWrapper)
+        
         // append imageEl with updated src as child to image wrapper and append textBlock as child to textBlockWrapper 
         imageWrapper.appendChild(imageEl)
         imageWrapper.appendChild(textBlockWrapper)
         textBlockWrapper.appendChild(textBlock);
-        console.log("results: ", results)
     });
 
     page++
