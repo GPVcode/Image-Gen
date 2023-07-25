@@ -13,5 +13,5 @@
 For practice, I used CSS for majority of the application except for the "show more" button. As you'll see in the code, I used strictly JavaScript to design the button and implement hover feature.
 
 
-###Project Set Up
+**Project Set Up**
 ![app design](/assets/Project%20Layout.png)
