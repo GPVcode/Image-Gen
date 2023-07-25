@@ -1,4 +1,4 @@
-## Search Image Application
+## [Image Search Application](https://image-gen-xi.vercel.app/)
 
 #### I am practicing my vanilla JavaScript skills by creating a search images app that generates images based on user search queries. I will utilize the Unsplash API to generate the images. 
 
