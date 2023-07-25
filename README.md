@@ -4,12 +4,16 @@
 
 
 **Process:**
-- First, I spent time making the system design for the app's layout and structure.
-- Next, I set up HTML boiler plate and used CSS to set up initial layouts using dummy data as placeholders.
-- Then I set up API calls from my script file.
-- After successfully getting image data back from Unsplash, I finetuned the app to my liking with CSS.
+1. First, I spent time making the system design for the app's layout and structure.
+2. Next, I set up HTML boiler plate and used CSS to set up initial layouts using dummy data as placeholders.
+3. Then I set up API calls from my script file.
+4. After successfully getting image data back from Unsplash, I finetuned the app to my liking with CSS.
 
-**Note**
+**Features**
+- Unsplash API request using vanilla Javascript
+- Show more button dynamically requesting more data from API
+
+**Note:**
 For practice, I used CSS for majority of the application except for the "show more" button. As you'll see in the code, I used strictly JavaScript to design the button and implement hover feature.
 
 
