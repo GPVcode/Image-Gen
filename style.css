@@ -93,13 +93,14 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   font-size: 25px;
   font-weight: bold;
-  
+  transition-duration: .4s;
   }
 
 /* Change the background color on mouse-over */
-.header a:hover {
+.header a.logo:hover {
     background-color: #ddd;
     color: black;
+  
   }
 
 /* Style the active/current link*/
@@ -186,14 +187,35 @@ img {
   margin: 50px;
 }
 
+/* .show-more-button{
+  transition-duration: .4s;
+}
+
+.show-more-button:hover{
+  background-color: #004a63;
+  color: white;
+} */
+
 input#search-input {
   border-radius: 13px;
   border-width: 1.5px;
   padding: 10px;
 }
 
-.submit-button{
-  display: block;
+.submit-button {
+  border: none;
+  display: inline-block;
+  background-color: #008CBA;
+  padding: 10px 24px;
+  color: white;
+  border-radius: 2px;
+  transition-duration: 0.4s;
+}
+
+.submit-button:hover {
+  background-color: #004a63; /* Green */
+  color: white;
+  cursor: pointer;
 }
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {

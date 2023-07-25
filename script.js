@@ -8,6 +8,7 @@ const resultsEl = document.querySelector(".search-results");
 // show more
 const showMore = document.getElementById("show-more-button")
 
+
 // Devise: 
 //      Read input data and create dynamic variable. Use this dynamic variable to fetch data from unsplash
 //      Get results of fetch and and use method to create img source element within a wrapper
@@ -57,14 +58,34 @@ const getImages = async () => {
 
 }
 
+const hoverTransistion = () => {
+    showMore.style.backgroundColor = "#004a63";
+    showMore.style.transitionDuration = ".4s";
+    document.getElementById('show-more-button').style.color = "white";
+}
+const hoverTransistion2 = () => {
+    showMore.style.backgroundColor = "#008CBA";
+    showMore.style.transitionDuration = ".4s";
+    document.getElementById('show-more-button').style.color = "white";
+}
+
 formEl.addEventListener('submit', (event) => {
     event.preventDefault();
     page = 1;
     getImages();
-    showMore.hidden = false;
+    showMore.style.backgroundColor = "#008CBA";
+    showMore.style.border = "none";
+    showMore.style.padding = "10px 24px";
+    showMore.style.color = "white";
+    showMore.style.cursor = "pointer";
+    showMore.style.borderRadius = "25px";
+    showMore.hidden = false;    
 })
 
 
 showMore.addEventListener('click', () => {
     getImages();
 })
+
+showMore.addEventListener('mouseover', hoverTransistion);
+showMore.addEventListener('mouseleave', hoverTransistion2)
